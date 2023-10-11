@@ -4,13 +4,16 @@ import "../App.css";
 import socialARDatabase from "../SocialARDatabase";
 
 export default function SliderShow({ video_url }) {
+  const [isFlipped, setIsFlipped] = useState(false);
+
   function toggleSlideflip(e) {
-    //console.log("card clicked: " + e.id);
+    console.log("card clicked: " + e.id);
     if (e.flipped) {
       e.flipped = false;
     } else {
       e.flipped = true;
     }
+    setIsFlipped(!isFlipped);
   }
 
   const arrayOfSlides = socialARDatabase.map((effect) => (
