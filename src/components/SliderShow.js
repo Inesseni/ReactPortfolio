@@ -7,7 +7,7 @@ export default function SliderShow({ video_url }) {
   const [isFlipped, setIsFlipped] = useState(false);
 
   function toggleSlideflip(e) {
-    console.log("card clicked: " + e.id);
+    //console.log("card clicked: " + e.id);
     if (e.flipped) {
       e.flipped = false;
     } else {
@@ -30,23 +30,41 @@ export default function SliderShow({ video_url }) {
 
   return (
     <div>
-      <p>social AR effects</p>
+      <div style={{ marginTop: "180px" }}></div>
       <div className="slider">
         <div className="slide-track">
           {arrayOfSlides}
           {arrayOfSlides}
         </div>
       </div>
-      <a
-        href="https://lensstudio.snapchat.com/creator/F1cYXucDAIl9uze0JG0RmA"
-        target="_blank"
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "space-between",
+          alignItems: "flex-end",
+        }}
       >
-        <button className="button-17" role="button">
-          Show All
-        </button>
-      </a>
+        <p style={{ margin: 0 }}>Social AR effects</p>
+        <a
+          href="https://lensstudio.snapchat.com/creator/F1cYXucDAIl9uze0JG0RmA"
+          target="_blank"
+        >
+          show all
+        </a>
+      </div>
     </div>
   );
 }
 
 //box flip: https://www.npmjs.com/package/react-box-flip
+
+/*
+        <a
+          href="https://lensstudio.snapchat.com/creator/F1cYXucDAIl9uze0JG0RmA"
+          target="_blank"
+        >
+          <button className="button-18" role="button">
+            show all
+          </button>
+        </a>
+*/
