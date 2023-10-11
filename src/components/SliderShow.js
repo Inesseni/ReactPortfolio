@@ -30,7 +30,7 @@ export default function SliderShow({ video_url }) {
 
   return (
     <div>
-      <div style={{ marginTop: "180px" }}></div>
+      <div style={{ marginTop: "calc(50vh - 220px)" }}></div>
       <div className="slider">
         <div className="slide-track">
           {arrayOfSlides}
@@ -48,6 +48,7 @@ export default function SliderShow({ video_url }) {
         <a
           href="https://lensstudio.snapchat.com/creator/F1cYXucDAIl9uze0JG0RmA"
           target="_blank"
+          style={{ textDecoration: "underline" }}
         >
           show all
         </a>
