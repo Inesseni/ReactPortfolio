@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useRef } from "react";
 import ReactBoxFlip from "react-box-flip";
 import "../App.css";
 
@@ -6,19 +6,15 @@ export default function Slide({
   effect_name,
   video_url,
   effect_descr,
-  link,
   snapcode,
+  onclick,
+  flippedState,
 }) {
-  const [isFlipped, setIsFlipped] = useState(false);
   const vidRef = useRef(null);
 
-  function handleClick() {
-    setIsFlipped(!isFlipped);
-  }
-
   return (
-    <div className="slide" onClick={handleClick}>
-      <ReactBoxFlip isFlipped={isFlipped}>
+    <div className="slide" onClick={onclick}>
+      <ReactBoxFlip isFlipped={flippedState}>
         <div className="card_front">
           <video width="100%" height="auto" autoPlay muted loop>
             <source src={video_url} type="video/mp4" ref={vidRef} />

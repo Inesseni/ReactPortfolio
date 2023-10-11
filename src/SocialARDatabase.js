@@ -8,6 +8,7 @@ const socialARDatabase = [
       "A lens utilising machine learning, speech recognition and speech-to-text to spawn your spoken words as wobbly soap bubbles in the air.",
     snapcode:
       "https://app.snapchat.com/web/deeplink/snapcode?data=a414d34498fc4acea54ea63c102a3948&version=1&type=svg",
+    flipped: false,
   },
   {
     id: 2,
@@ -18,6 +19,7 @@ const socialARDatabase = [
       "Simple and fun face cutouts AR lens with over 8 million views!",
     snapcode:
       "https://app.snapchat.com/web/deeplink/snapcode?data=d07e74e4b10d41a291f7f4842b142d01&version=1&type=svg",
+    flipped: false,
   },
   {
     id: 3,
@@ -28,6 +30,7 @@ const socialARDatabase = [
       "Custom trained machine learning model to recognize different gem stones and to tell you about their characteristics.",
     snapcode:
       "https://app.snapchat.com/web/deeplink/snapcode?data=79d8865b41a0409dad71950ce77e0aeb&version=1&type=svg",
+    flipped: false,
   },
   {
     id: 4,
@@ -38,6 +41,7 @@ const socialARDatabase = [
       "Mystic face lens that also spawns glowy stars on the ceiling.",
     snapcode:
       "https://app.snapchat.com/web/deeplink/snapcode?data=c9f04344af9046e984b8bbdd029293f8&version=1&type=svg",
+    flipped: false,
   },
   {
     id: 5,
@@ -48,6 +52,7 @@ const socialARDatabase = [
       "A machine learning model recognizes if the user wears glasses and blurrs the view if they don't.",
     snapcode:
       "https://app.snapchat.com/web/deeplink/snapcode?data=21af5fe6f71f432e8938f178d793a594&version=1&type=svg",
+    flipped: false,
   },
   {
     id: 6,
@@ -58,6 +63,7 @@ const socialARDatabase = [
       "Cyberpunk face lens that reacts on blinking and looks very sci-fi.",
     snapcode:
       "https://app.snapchat.com/web/deeplink/snapcode?data=477f819ce5b144878ed25a529cbadeae&version=1&type=svg",
+    flipped: false,
   },
 
   {
@@ -69,6 +75,7 @@ const socialARDatabase = [
       "3D Hand tracking that gets mirrored onto a 3D model of a robot hand. Cool party trick!",
     snapcode:
       "https://snapcodes.storage.googleapis.com/png/5f673659-477f-3d2a-8376-f2e85e38c430_320_584d748c-bd74-4c6b-a4d9-44cecc48a507.png",
+    flipped: false,
   },
 
   {
@@ -80,6 +87,7 @@ const socialARDatabase = [
       "This lens uses Snapchats machine learning component to show the users true - crying - face behind the mask.",
     snapcode:
       "https://snapcodes.storage.googleapis.com/png/944f7b52-3736-30a8-a0cd-687161bc8ff1_320_4eccd545-e866-454a-aa0e-d07f3c261de8.png",
+    flipped: false,
   },
   {
     id: 9,
@@ -90,6 +98,7 @@ const socialARDatabase = [
       "Face lens for humans and for cats. Editable text to visualize thoughts.",
     snapcode:
       "https://snapcodes.storage.googleapis.com/png/37a86c4f-2994-3ca0-9a46-815f9fc25c84_320_43c597bf-7087-41cd-9786-696d1123d9a4.png",
+    flipped: false,
   },
   {
     id: 10,
@@ -100,6 +109,7 @@ const socialARDatabase = [
       "Tap to place a sticker on the face, shake your head to delete all of them.",
     snapcode:
       "https://snapcodes.storage.googleapis.com/png/b0cf28e6-a61f-3dbc-ab2e-31cf77a6239c_320_31d07d1a-73d9-4690-af17-a506090d927a.png",
+    flipped: false,
   },
 ];
 

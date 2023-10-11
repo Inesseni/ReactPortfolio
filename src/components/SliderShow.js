@@ -1,9 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
 import Slide from "./Slide";
 import "../App.css";
 import socialARDatabase from "../SocialARDatabase";
 
 export default function SliderShow({ video_url }) {
+  function toggleSlideflip(e) {
+    //console.log("card clicked: " + e.id);
+    if (e.flipped) {
+      e.flipped = false;
+    } else {
+      e.flipped = true;
+    }
+  }
+
   const arrayOfSlides = socialARDatabase.map((effect) => (
     <Slide
       video_url={effect.videoLink}
@@ -11,6 +20,8 @@ export default function SliderShow({ video_url }) {
       effect_descr={effect.description}
       link={effect.link}
       snapcode={effect.snapcode}
+      onclick={() => toggleSlideflip(effect)}
+      flippedState={effect.flipped}
     />
   ));
 
