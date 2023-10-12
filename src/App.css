@@ -41,6 +41,13 @@ p {
   gap: 10px;
   justify-content: space-between;
 }
+.socialIcon {
+  margin-left: 5px;
+  margin-right: 5px;
+  height: 20px;
+  width: auto;
+}
+
 .slider {
   flex: 3;
   min-height: 460px;

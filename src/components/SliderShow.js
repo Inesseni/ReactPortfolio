@@ -9,6 +9,7 @@ export default function SliderShow({ video_url }) {
   const [isFlipped, setIsFlipped] = useState(false);
 
   function toggleSlideflip(e) {
+    if (isMobile) return;
     //console.log("card clicked: " + e.id);
     if (e.flipped) {
       e.flipped = false;
@@ -33,13 +34,17 @@ export default function SliderShow({ video_url }) {
   return (
     <div className="section">
       <Header />
-
-      <div className="slider">
-        <div className="slide-track">
-          {arrayOfSlides}
-          {arrayOfSlides}
+      {isMobile === false && (
+        <div>
+          <div className="slider">
+            <div className="slide-track">
+              {arrayOfSlides}
+              {arrayOfSlides}
+            </div>
+          </div>
         </div>
-      </div>
+      )}
+      {isMobile === true && <div className="slider">mobile swipe</div>}
       <div className="slider_texts">
         <p>Social AR effects</p>
         <a

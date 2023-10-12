@@ -17,19 +17,35 @@ export default function Header() {
         {isMobile === true && (
           <div>
             <a href="https://www.instagram.com/inidewin_/" target="_blank">
-              <img src="/assets/instagarm.png" width="5%" />
+              <img
+                src="/assets/instagarm.png"
+                width="5%"
+                className="socialIcon"
+              />
             </a>
             <a href="https://www.linkedin.com/in/ines-hilz/" target="_blank">
-              <img src="/assets/linkedIn.png" width="5%" />
+              <img
+                src="/assets/linkedIn.png"
+                width="5%"
+                className="socialIcon"
+              />
             </a>
             <a
               href="https://www.youtube.com/channel/UCD7E1Iy8RkSsYPheoQ-qa6w"
               target="_blank"
             >
-              <img src="/assets/youtube.png" width="7%" />
+              <img
+                src="/assets/youtube.png"
+                width="7%"
+                className="socialIcon"
+              />
             </a>
             <a href="https://twitter.com/InesHilz" target="_blank">
-              <img src="/assets/twitter.png" width="5%" />
+              <img
+                src="/assets/twitter.png"
+                width="5%"
+                className="socialIcon"
+              />
             </a>
           </div>
         )}
