@@ -23,7 +23,7 @@ export default function CardStack() {
             key={color}
             style={{
               ...cardStyle,
-              backgroundColor: color,
+              //backgroundColor: color,
               cursor: canDrag ? "grab" : "auto",
             }}
             animate={{
@@ -34,10 +34,17 @@ export default function CardStack() {
             }}
             drag={canDrag ? "x" : true}
             dragConstraints={{
+              top: 0,
+              bottom: 0,
               left: 0,
               right: 0,
             }}
-            onDragEnd={() => moveToEnd(index)}
+            onDragEnd={function () {
+              if (index == 0) {
+                moveToEnd(index);
+              }
+            }}
+            //onDragEnd={() => moveToEnd(index)}
           >
             <Slide
               video_url={
@@ -53,6 +60,7 @@ export default function CardStack() {
 
 const cardWrapStyle = {
   position: "absolute",
+  height: "100%",
   width: "100%",
   left: "-30%",
   margin: "0px",
