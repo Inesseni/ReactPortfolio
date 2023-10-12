@@ -1,9 +1,10 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import Slide from "./Slide";
 import "../App.css";
 import socialARDatabase from "../SocialARDatabase";
 import { isMobile } from "react-device-detect";
 import Header from "./Header";
+import FramerSwipe from "./FramerSwipe";
 
 export default function SliderShow({ video_url }) {
   const [isFlipped, setIsFlipped] = useState(false);
@@ -44,7 +45,18 @@ export default function SliderShow({ video_url }) {
           </div>
         </div>
       )}
-      {isMobile === true && <div className="slider">mobile swipe</div>}
+      {isMobile === true && (
+        <div
+          className="slider"
+          style={{
+            width: "100%",
+            display: "flex",
+            marginBottom: "20px",
+          }}
+        >
+          <FramerSwipe />
+        </div>
+      )}
       <div className="slider_texts">
         <p>Social AR effects</p>
         <a

@@ -54,7 +54,7 @@ p {
   overflow: hidden;
   padding-top: 20px;
   position: relative;
-  align-items: center;
+  padding-bottom: 30px;
 }
 
 .slider .slide-track {
@@ -101,7 +101,6 @@ p {
 
 .card_front {
   max-width: 249px;
-  height: 440px;
   position: relative;
   left: 1px;
   display: flex;
@@ -119,6 +118,19 @@ p {
   background-color: yellow;
   padding: 20px;
   border-radius: 20px;
+}
+
+.infinite-cards {
+  width: 100%;
+  display: grid;
+  place-items: center center;
+}
+.framerCard {
+  position: absolute;
+  border-radius: 20px;
+  color: #fff;
+  display: grid;
+  place-items: center center;
 }
 
 /* CSS */
