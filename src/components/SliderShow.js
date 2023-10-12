@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import Slide from "./Slide";
 import "../App.css";
 import socialARDatabase from "../SocialARDatabase";
+import { isMobile } from "react-device-detect";
+import Header from "./Header";
 
 export default function SliderShow({ video_url }) {
   const [isFlipped, setIsFlipped] = useState(false);
@@ -29,22 +31,17 @@ export default function SliderShow({ video_url }) {
   ));
 
   return (
-    <div>
-      <div style={{ marginTop: "calc(50vh - 220px)" }}></div>
+    <div className="section">
+      <Header />
+
       <div className="slider">
         <div className="slide-track">
           {arrayOfSlides}
           {arrayOfSlides}
         </div>
       </div>
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "space-between",
-          alignItems: "flex-end",
-        }}
-      >
-        <p style={{ margin: 0 }}>Social AR effects</p>
+      <div className="slider_texts">
+        <p>Social AR effects</p>
         <a
           href="https://lensstudio.snapchat.com/creator/F1cYXucDAIl9uze0JG0RmA"
           target="_blank"
@@ -68,4 +65,11 @@ export default function SliderShow({ video_url }) {
             show all
           </button>
         </a>
+
+import { isMobile } from "react-device-detect";
+        {isMobile === true && (
+        <div
+          style={{ backgroundColor: "red", width: "100px", height: "100px" }}
+        ></div>
+      )}
 */

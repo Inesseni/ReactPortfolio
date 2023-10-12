@@ -8,7 +8,6 @@ import socialARDatabase from "./SocialARDatabase";
 function App() {
   return (
     <div className="App">
-      <Header />
       <SliderShow />
     </div>
   );

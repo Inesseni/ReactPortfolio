@@ -15,13 +15,39 @@ a:hover {
   text-decoration: underline;
 }
 
-.slider {
+p {
+  margin: 0;
+  padding: 0;
+}
+
+.section {
+  height: 100%;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+}
+
+.Header {
+  z-index: 2;
   flex: 1;
-  max-width: 80vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: "red";
+}
+
+.Header_texts {
+  display: flex;
+  gap: 10px;
+  justify-content: space-between;
+}
+.slider {
+  flex: 3;
+  min-height: 460px;
   overflow: hidden;
+  padding-top: 20px;
   position: relative;
-  margin-top: 30px;
-  height: 480px;
+  align-items: center;
 }
 
 .slider .slide-track {
@@ -47,6 +73,14 @@ a:hover {
 .slider .slide:hover {
   position: relative;
   padding-top: 20px;
+}
+
+.slider_texts {
+  position: inherit;
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+  justify-content: space-between;
 }
 
 @keyframes scroll {
