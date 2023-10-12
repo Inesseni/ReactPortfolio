@@ -55,6 +55,7 @@ p {
   padding-top: 20px;
   position: relative;
   align-items: center;
+  padding-bottom: 25px;
 }
 
 .slider .slide-track {
@@ -87,7 +88,9 @@ p {
   display: flex;
   flex-direction: row;
   flex: 1;
+  align-self: center;
   justify-content: space-between;
+  width: 100%;
 }
 
 @keyframes scroll {

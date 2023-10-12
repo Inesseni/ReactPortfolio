@@ -2,13 +2,17 @@ import React from "react";
 import { motion } from "framer-motion";
 import move from "lodash-move";
 import Slide from "./Slide";
+import socialARDatabase from "../SocialARDatabase";
 
 const CARD_COLORS = ["#266677", "#cb7c7b", "#36a15c", "#cda355", "#747475"];
-const CARD_OFFSET = 20;
-const SCALE_FACTOR = 0.05;
+const CARD_OFFSET = 3;
+const SCALE_FACTOR = 0.9;
+const CARD_DATA = socialARDatabase;
 
 export default function CardStack() {
-  const [cards, setCards] = React.useState(CARD_COLORS);
+  const [cards, setCards] = React.useState([
+    ...Array(socialARDatabase.length).keys(),
+  ]);
   const moveToEnd = (from) => {
     setCards(move(cards, from, cards.length - 1));
   };
@@ -17,6 +21,9 @@ export default function CardStack() {
     <ul style={cardWrapStyle}>
       {cards.map((color, index) => {
         const canDrag = index === 0;
+        const dataIndex = index % socialARDatabase.length; // Wrap the index if there are more than 4 items
+        const videoUrl =
+          index < CARD_DATA.length ? CARD_DATA[index].videoLink : "";
 
         return (
           <motion.li
@@ -28,8 +35,8 @@ export default function CardStack() {
             }}
             animate={{
               right: index * -CARD_OFFSET,
-              top: index * CARD_OFFSET * 0.5,
-              scale: 1 - index * SCALE_FACTOR,
+              top: index * CARD_OFFSET,
+              scale: SCALE_FACTOR,
               zIndex: CARD_COLORS.length - index,
             }}
             drag={canDrag ? "x" : true}
@@ -44,13 +51,10 @@ export default function CardStack() {
                 moveToEnd(index);
               }
             }}
-            //onDragEnd={() => moveToEnd(index)}
           >
-            <Slide
-              video_url={
-                "https://community-lens.storage.googleapis.com/preview-media/final/a8356d4c-25be-4c40-bbb4-651700f89430.mp4"
-              }
-            />
+            {socialARDatabase[dataIndex] && (
+              <Slide video_url={socialARDatabase[dataIndex].videoLink} />
+            )}
           </motion.li>
         );
       })}
@@ -59,19 +63,15 @@ export default function CardStack() {
 }
 
 const cardWrapStyle = {
-  position: "absolute",
-  height: "100%",
-  width: "100%",
-  left: "-30%",
-  margin: "0px",
-  padding: "0px",
+  position: "relative",
+  left: "calc(50% - 38%)",
 };
 
 const cardStyle = {
+  width: "100%",
+  height: "100%",
   position: "absolute",
-  width: "220px",
-  height: "350px",
-  borderRadius: "8px",
+  backgroundColor: "green",
   transformOrigin: "top center",
   listStyle: "none",
 };

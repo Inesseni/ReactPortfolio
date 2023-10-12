@@ -16,7 +16,7 @@ export default function Slide({
     <div className="slide" onClick={onclick}>
       <ReactBoxFlip isFlipped={flippedState}>
         <div className="card_front">
-          <video width="100%" autoPlay muted loop>
+          <video width="100%" height="100%" autoPlay muted loop>
             <source src={video_url} type="video/mp4" />
           </video>
         </div>

@@ -33,7 +33,7 @@ export default function SliderShow({ video_url }) {
   ));
 
   return (
-    <div className="section">
+    <div className="section" style={{ width: isMobile ? "100%" : "8%0" }}>
       <Header />
       {isMobile === false && (
         <div>
@@ -50,14 +50,16 @@ export default function SliderShow({ video_url }) {
           className="slider"
           style={{
             width: "100%",
-            display: "flex",
-            marginBottom: "20px",
+            height: "100%",
           }}
         >
           <CardStack />
         </div>
       )}
-      <div className="slider_texts">
+      <div
+        className="slider_texts"
+        style={{ maxWidth: isMobile ? "60%" : "100%" }}
+      >
         <p>Social AR effects</p>
         <a
           href="https://lensstudio.snapchat.com/creator/F1cYXucDAIl9uze0JG0RmA"
