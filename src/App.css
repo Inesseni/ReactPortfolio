@@ -57,9 +57,20 @@ p {
   align-items: center;
   padding-bottom: 25px;
 }
+.slideMobile {
+  flex: 3;
+  min-height: 460px;
+  overflow: hidden;
+  position: relative;
+  align-items: center;
+  padding-bottom: 25px;
+}
+.slideMobile_img {
+  padding-top: 0;
+}
 
 .slider .slide-track {
-  animation: scroll 30s linear infinite;
+  animation: scroll 0s linear infinite;
   display: flex;
   width: calc(270px * 10);
 }
@@ -117,9 +128,10 @@ p {
 .card_back {
   max-width: 230px;
   display: flex;
-  height: 400px;
+  height: 405px;
   flex-direction: column;
   background-color: yellow;
+
   padding: 20px;
   border-radius: 20px;
 }

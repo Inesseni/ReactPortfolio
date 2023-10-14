@@ -1,17 +1,17 @@
 const socialARDatabase = [
   {
-    id: 1,
+    id: 0,
     effect_name: "Speech Bubbles",
     videoLink:
       "https://community-lens.storage.googleapis.com/preview-media/final/417194ab-192d-4507-978f-fa713886efbd.mp4",
     description:
-      "A lens utilising machine learning, speech recognition and speech-to-text to spawn your spoken words as wobbly soap bubbles in the air.",
+      "A lens utilising machine learning, speech recognition and speech-to-text to place your spoken words as wobbly soap bubbles in the air.",
     snapcode:
       "https://app.snapchat.com/web/deeplink/snapcode?data=a414d34498fc4acea54ea63c102a3948&version=1&type=svg",
     flipped: false,
   },
   {
-    id: 2,
+    id: 1,
     effect_name: "Bombastic side eye",
     videoLink:
       "https://community-lens.storage.googleapis.com/preview-media/final/67efd670-2e3d-4719-b652-db25a7ae7437.mp4",
@@ -22,7 +22,7 @@ const socialARDatabase = [
     flipped: false,
   },
   {
-    id: 3,
+    id: 2,
     effect_name: "Crystal vision ML",
     videoLink:
       "https://community-lens.storage.googleapis.com/preview-media/final/a8356d4c-25be-4c40-bbb4-651700f89430.mp4",
@@ -33,7 +33,7 @@ const socialARDatabase = [
     flipped: false,
   },
   {
-    id: 4,
+    id: 3,
     effect_name: "Starry eyes",
     videoLink:
       "https://community-lens.storage.googleapis.com/preview-media/final/020eb24b-5b8b-4aca-96cb-7e7cb1734667.mp4",
@@ -44,7 +44,7 @@ const socialARDatabase = [
     flipped: false,
   },
   {
-    id: 5,
+    id: 4,
     effect_name: "Lost glasses",
     videoLink:
       "https://community-lens.storage.googleapis.com/preview-media/final/2e833514-4ac6-403d-9112-ba12338b12c5.mp4",
@@ -55,7 +55,7 @@ const socialARDatabase = [
     flipped: false,
   },
   {
-    id: 6,
+    id: 5,
     effect_name: "Cybrphunki",
     videoLink:
       "https://community-lens.storage.googleapis.com/preview-media/final/f4e9ffde-70e8-4af2-bb67-fe01269e84bf.mp4",
@@ -67,7 +67,7 @@ const socialARDatabase = [
   },
 
   {
-    id: 7,
+    id: 6,
     effect_name: "Robo Hand",
     videoLink:
       "https://community-lens.storage.googleapis.com/preview-media/final/ff1e7718-4cf7-4f86-8f6e-64179e850a66.mp4",
@@ -79,7 +79,7 @@ const socialARDatabase = [
   },
 
   {
-    id: 8,
+    id: 7,
     effect_name: "True Face",
     videoLink:
       "https://community-lens.storage.googleapis.com/preview-media/final/11730eee-2859-4ce3-9864-92370ff4556b.mp4",
@@ -90,7 +90,7 @@ const socialARDatabase = [
     flipped: false,
   },
   {
-    id: 9,
+    id: 8,
     effect_name: "Overthinker",
     videoLink:
       "https://community-lens.storage.googleapis.com/preview-media/final/c23c9650-4c3a-4a0c-97db-6c178d935d26.mp4",
@@ -101,7 +101,7 @@ const socialARDatabase = [
     flipped: false,
   },
   {
-    id: 10,
+    id: 9,
     effect_name: "Sticker Face",
     videoLink:
       "https://community-lens.storage.googleapis.com/preview-media/final/ec119ba6-d6ab-451d-b64b-9c8c36164650.mp4",

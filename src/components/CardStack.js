@@ -1,36 +1,46 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import move from "lodash-move";
-import Slide from "./Slide";
+import SlideMobile from "./SlideMobile";
 import socialARDatabase from "../SocialARDatabase";
 
 const CARD_COLORS = ["#266677", "#cb7c7b", "#36a15c", "#cda355", "#747475"];
 const CARD_OFFSET = 3;
 const SCALE_FACTOR = 0.9;
-const CARD_DATA = socialARDatabase;
 
 export default function CardStack() {
-  const [cards, setCards] = React.useState([
-    ...Array(socialARDatabase.length).keys(),
-  ]);
+  const [scriptDatabase, setScriptDatabase] = useState(socialARDatabase);
+
+  const [cards, setCards] = useState([...Array(scriptDatabase.length).keys()]);
   const moveToEnd = (from) => {
     setCards(move(cards, from, cards.length - 1));
   };
+
+  function toggleSlideflip(clickedCard) {
+    const updatedDatabase = scriptDatabase.map((card) => {
+      if (card.id === clickedCard.id) {
+        // Toggle the flipped property of the clicked card
+        return { ...card, flipped: !card.flipped };
+      }
+      return card;
+    });
+
+    // Update the socialARDatabase state with the updated database
+    setScriptDatabase(updatedDatabase);
+    for (var i = 0; i <= scriptDatabase.length - 1; i++) {
+      console.log(scriptDatabase[i].flipped);
+    }
+  }
 
   return (
     <ul style={cardWrapStyle}>
       {cards.map((color, index) => {
         const canDrag = index === 0;
-        const dataIndex = index % socialARDatabase.length; // Wrap the index if there are more than 4 items
-        const videoUrl =
-          index < CARD_DATA.length ? CARD_DATA[index].videoLink : "";
-
         return (
           <motion.li
             key={color}
             style={{
               ...cardStyle,
-              //backgroundColor: color,
               cursor: canDrag ? "grab" : "auto",
             }}
             animate={{
@@ -47,13 +57,21 @@ export default function CardStack() {
               right: 0,
             }}
             onDragEnd={function () {
-              if (index == 0) {
+              //just check if we drag the front card
+              if (index === 0) {
                 moveToEnd(index);
               }
             }}
           >
-            {socialARDatabase[dataIndex] && (
-              <Slide video_url={socialARDatabase[dataIndex].videoLink} />
+            {scriptDatabase[index] && (
+              <SlideMobile
+                video_url={scriptDatabase[index].videoLink}
+                flippedState={scriptDatabase[index].flipped}
+                effect_name={scriptDatabase[index].effect_name}
+                effect_descr={scriptDatabase[index].description}
+                onclick={() => toggleSlideflip(scriptDatabase[index])}
+                snapcode={scriptDatabase[index].snapcode}
+              />
             )}
           </motion.li>
         );

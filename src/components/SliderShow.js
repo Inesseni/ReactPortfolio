@@ -10,8 +10,6 @@ export default function SliderShow({ video_url }) {
   const [isFlipped, setIsFlipped] = useState(false);
 
   function toggleSlideflip(e) {
-    if (isMobile) return;
-    //console.log("card clicked: " + e.id);
     if (e.flipped) {
       e.flipped = false;
     } else {
