@@ -9,24 +9,52 @@ export default function SlideMobile({
   snapcode,
   onclick,
   flippedState,
+  link,
 }) {
   const vidRef = useRef(null);
 
   return (
-    <div className="sliderMobile" onClick={onclick}>
+    <div onClick={onclick}>
       <ReactBoxFlip isFlipped={flippedState}>
-        <div className="card_front">
-          <video width="100%" height="100%" autoPlay muted loop>
+        <div style={{ display: "flex", justifyContent: "center" }}>
+          <video autoPlay muted loop className="cardMobile">
             <source src={video_url} type="video/mp4" />
           </video>
         </div>
-        <div
-          className="card_back"
-          style={{ maxWidth: "208px", maxHeight: "397px" }}
-        >
-          <img src={snapcode} style={{ paddingTop: "0px" }} />
-          <h2 style={{ marginBottom: "8px" }}>{effect_name}</h2>
-          <div>{effect_descr}</div>
+        <div className="cardMobile_back">
+          <div className="cardMobile_content">
+            <div
+              style={{
+                margin: "20px",
+                display: "flex",
+                flexDirection: "column",
+              }}
+            >
+              <img src={snapcode} />
+              <h2
+                style={{
+                  margin: "0px",
+                  padding: "0px",
+                  flex: 1.5,
+                  fontSize: "3vh",
+                }}
+              >
+                {effect_name}
+              </h2>
+              <div style={{ flex: 5, fontSize: "1.8vh" }}>{effect_descr}</div>
+              <a
+                href={link}
+                target="_blank"
+                style={{
+                  flex: 1,
+                  textDecoration: "underline",
+                  fontSize: "1.8vh",
+                }}
+              >
+                open in snapchat
+              </a>
+            </div>
+          </div>
         </div>
       </ReactBoxFlip>
     </div>

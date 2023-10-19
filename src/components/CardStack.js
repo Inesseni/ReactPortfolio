@@ -3,17 +3,23 @@ import { motion } from "framer-motion";
 import move from "lodash-move";
 import SlideMobile from "./SlideMobile";
 import socialARDatabase from "../SocialARDatabase";
+import "../App.css";
 
-const CARD_COLORS = ["#266677", "#cb7c7b", "#36a15c", "#cda355", "#747475"];
 const CARD_OFFSET = 3;
 const SCALE_FACTOR = 0.9;
 
 export default function CardStack() {
   const [scriptDatabase, setScriptDatabase] = useState(socialARDatabase);
-
-  const [cards, setCards] = useState([...Array(scriptDatabase.length).keys()]);
   const moveToEnd = (from) => {
-    setCards(move(cards, from, cards.length - 1));
+    console.log(from); //gives out 0
+    console.log(scriptDatabase.length - from); //gives out 9
+
+    const updatedDatabase = move(
+      scriptDatabase,
+      from,
+      scriptDatabase.length - 1
+    );
+    setScriptDatabase(updatedDatabase);
   };
 
   function toggleSlideflip(clickedCard) {
@@ -27,27 +33,30 @@ export default function CardStack() {
 
     // Update the socialARDatabase state with the updated database
     setScriptDatabase(updatedDatabase);
-    for (var i = 0; i <= scriptDatabase.length - 1; i++) {
-      console.log(scriptDatabase[i].flipped);
-    }
   }
 
   return (
-    <ul style={cardWrapStyle}>
-      {cards.map((color, index) => {
+    <ul className="cardWrapStyle">
+      {scriptDatabase.map((color, index) => {
         const canDrag = index === 0;
         return (
           <motion.li
-            key={color}
+            key={index}
+            className="cardStyle"
             style={{
-              ...cardStyle,
               cursor: canDrag ? "grab" : "auto",
+            }}
+            onDragEnd={function () {
+              //just check if we drag the front card
+              if (index === 0) {
+                moveToEnd(index);
+              }
             }}
             animate={{
               right: index * -CARD_OFFSET,
               top: index * CARD_OFFSET,
               scale: SCALE_FACTOR,
-              zIndex: CARD_COLORS.length - index,
+              zIndex: scriptDatabase.length - index,
             }}
             drag={canDrag ? "x" : true}
             dragConstraints={{
@@ -55,12 +64,6 @@ export default function CardStack() {
               bottom: 0,
               left: 0,
               right: 0,
-            }}
-            onDragEnd={function () {
-              //just check if we drag the front card
-              if (index === 0) {
-                moveToEnd(index);
-              }
             }}
           >
             {scriptDatabase[index] && (
@@ -71,6 +74,7 @@ export default function CardStack() {
                 effect_descr={scriptDatabase[index].description}
                 onclick={() => toggleSlideflip(scriptDatabase[index])}
                 snapcode={scriptDatabase[index].snapcode}
+                link={scriptDatabase[index].url}
               />
             )}
           </motion.li>
@@ -79,17 +83,3 @@ export default function CardStack() {
     </ul>
   );
 }
-
-const cardWrapStyle = {
-  position: "relative",
-  left: "calc(50% - 38%)",
-};
-
-const cardStyle = {
-  width: "100%",
-  height: "100%",
-  position: "absolute",
-  backgroundColor: "green",
-  transformOrigin: "top center",
-  listStyle: "none",
-};

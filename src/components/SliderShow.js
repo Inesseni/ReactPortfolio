@@ -31,7 +31,7 @@ export default function SliderShow({ video_url }) {
   ));
 
   return (
-    <div className="section" style={{ width: isMobile ? "100%" : "8%0" }}>
+    <div className="section" style={{ width: isMobile ? "100%" : "80%" }}>
       <Header />
       {isMobile === false && (
         <div>
@@ -44,19 +44,13 @@ export default function SliderShow({ video_url }) {
         </div>
       )}
       {isMobile === true && (
-        <div
-          className="slider"
-          style={{
-            width: "100%",
-            height: "100%",
-          }}
-        >
+        <div className="slideRMobile">
           <CardStack />
         </div>
       )}
       <div
         className="slider_texts"
-        style={{ maxWidth: isMobile ? "60%" : "100%" }}
+        style={{ maxWidth: isMobile ? "65%" : "100%" }}
       >
         <p>Social AR effects</p>
         <a
@@ -66,6 +60,9 @@ export default function SliderShow({ video_url }) {
         >
           show all
         </a>
+      </div>
+      <div className="scrollArrow">
+        <img src="./assets/arrow_down.png" />
       </div>
     </div>
   );

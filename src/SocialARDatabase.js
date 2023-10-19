@@ -9,6 +9,7 @@ const socialARDatabase = [
     snapcode:
       "https://app.snapchat.com/web/deeplink/snapcode?data=a414d34498fc4acea54ea63c102a3948&version=1&type=svg",
     flipped: false,
+    url: "https://www.snapchat.com/unlock/?type=SNAPCODE&uuid=a414d34498fc4acea54ea63c102a3948&metadata=01",
   },
   {
     id: 1,
@@ -20,6 +21,7 @@ const socialARDatabase = [
     snapcode:
       "https://app.snapchat.com/web/deeplink/snapcode?data=d07e74e4b10d41a291f7f4842b142d01&version=1&type=svg",
     flipped: false,
+    url: "https://www.snapchat.com/unlock/?type=SNAPCODE&uuid=d07e74e4b10d41a291f7f4842b142d01&metadata=01",
   },
   {
     id: 2,
@@ -31,6 +33,7 @@ const socialARDatabase = [
     snapcode:
       "https://app.snapchat.com/web/deeplink/snapcode?data=79d8865b41a0409dad71950ce77e0aeb&version=1&type=svg",
     flipped: false,
+    url: "https://www.snapchat.com/unlock/?type=SNAPCODE&uuid=79d8865b41a0409dad71950ce77e0aeb&metadata=01",
   },
   {
     id: 3,
@@ -42,6 +45,7 @@ const socialARDatabase = [
     snapcode:
       "https://app.snapchat.com/web/deeplink/snapcode?data=c9f04344af9046e984b8bbdd029293f8&version=1&type=svg",
     flipped: false,
+    url: "https://www.snapchat.com/unlock/?type=SNAPCODE&uuid=927bfda3a94d495ea6e68bfccefe7e4e&metadata=01",
   },
   {
     id: 4,
@@ -53,6 +57,7 @@ const socialARDatabase = [
     snapcode:
       "https://app.snapchat.com/web/deeplink/snapcode?data=21af5fe6f71f432e8938f178d793a594&version=1&type=svg",
     flipped: false,
+    url: "https://www.snapchat.com/unlock/?type=SNAPCODE&uuid=21af5fe6f71f432e8938f178d793a594&metadata=01",
   },
   {
     id: 5,
@@ -64,6 +69,7 @@ const socialARDatabase = [
     snapcode:
       "https://app.snapchat.com/web/deeplink/snapcode?data=477f819ce5b144878ed25a529cbadeae&version=1&type=svg",
     flipped: false,
+    url: "https://www.snapchat.com/unlock/?type=SNAPCODE&uuid=e1fe3bfa133c41239eabc56a8173e91c&metadata=01",
   },
 
   {
@@ -76,6 +82,7 @@ const socialARDatabase = [
     snapcode:
       "https://snapcodes.storage.googleapis.com/png/5f673659-477f-3d2a-8376-f2e85e38c430_320_584d748c-bd74-4c6b-a4d9-44cecc48a507.png",
     flipped: false,
+    url: "https://www.snapchat.com/unlock/?type=SNAPCODE&uuid=0c4a4539326d47f4b0b7d0d3a87a41cf&metadata=01",
   },
 
   {
@@ -88,6 +95,7 @@ const socialARDatabase = [
     snapcode:
       "https://snapcodes.storage.googleapis.com/png/944f7b52-3736-30a8-a0cd-687161bc8ff1_320_4eccd545-e866-454a-aa0e-d07f3c261de8.png",
     flipped: false,
+    url: "https://www.snapchat.com/unlock/?type=SNAPCODE&uuid=d3f52fbef2dd41b2b4b3f90d5c77557f&metadata=01",
   },
   {
     id: 8,
@@ -99,6 +107,7 @@ const socialARDatabase = [
     snapcode:
       "https://snapcodes.storage.googleapis.com/png/37a86c4f-2994-3ca0-9a46-815f9fc25c84_320_43c597bf-7087-41cd-9786-696d1123d9a4.png",
     flipped: false,
+    url: "https://www.snapchat.com/unlock/?type=SNAPCODE&uuid=2997734b0c9241109f662eef67878f9a&metadata=01",
   },
   {
     id: 9,
@@ -110,6 +119,7 @@ const socialARDatabase = [
     snapcode:
       "https://snapcodes.storage.googleapis.com/png/b0cf28e6-a61f-3dbc-ab2e-31cf77a6239c_320_31d07d1a-73d9-4690-af17-a506090d927a.png",
     flipped: false,
+    url: "https://www.snapchat.com/unlock/?type=SNAPCODE&uuid=4c46b5e42f6844168b93b2416dbba2b2&metadata=01",
   },
 ];
 
